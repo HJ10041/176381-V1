@@ -41,7 +41,7 @@ end;
 
 shock = [1 0]'; 
 thpi1 = 0; 
-[xt pit vt qt it rnt pt] = solveit(sig,kap, bet, thpi1, thx,eta, rho, omeg,T,shock);
+[xt, pit, vt, qt, it, rnt, pt] = solveit(sig,kap, bet, thpi1, thx,eta, rho, omeg,T,shock);
 
 figure; 
 hold on;
@@ -67,7 +67,7 @@ itf = it;
 shock = [0 1]';
 thpi = 0; 
 thx = 0; 
-[xt pit vt qt it rnt pt] = solveit(sig,kap, bet, thpi, thx, eta, rho, omeg,T,shock);
+[xt, pit, vt, qt, it, rnt, pt] = solveit(sig,kap, bet, thpi, thx, eta, rho, omeg,T,shock);
 
 
 figure;
@@ -155,7 +155,7 @@ end;
 
 %******
 
-function [xt pit vt qt it rnt pt] = solveit(sig,kap, bet, thpi, thx, eta, rho, omeg,T,shock);
+function [xt, pit, vt, qt, it, rnt, pt] = solveit(sig,kap, bet, thpi, thx, eta, rho, omeg,T,shock);
 
 show_results = 1; 
 
